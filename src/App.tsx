@@ -1,3 +1,9 @@
+import { MultiStepForm } from "./components/MultiStepForm";
+
 export function App() {
-  return <div>Mikasa</div>;
+  return (
+    <main className="app">
+      <MultiStepForm />
+    </main>
+  );
 }

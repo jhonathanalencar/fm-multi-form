@@ -1,0 +1,18 @@
+.step {
+  border-radius: 9999px;
+  border: 0.15rem solid var(--alabaster);
+  background-color: transparent;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 600;
+  color: var(--alabaster);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.selected {
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
+  }
+}

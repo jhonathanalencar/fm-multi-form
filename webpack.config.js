@@ -15,10 +15,17 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "public"),
+    },
+    port: 5173,
+    hot: true,
+  },
   module: {
     rules: [
       {
-        test: /\.(j|t)sx$/,
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -42,12 +49,5 @@ module.exports = {
       template: path.resolve(__dirname, "public", "index.html"),
     }),
   ].filter(Boolean),
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "public"),
-    },
-    port: 3000,
-    hot: true,
-  },
   target: "web",
 };

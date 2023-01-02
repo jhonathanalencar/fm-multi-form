@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/src/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/src/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
 :root {
   --marine-blue: hsl(213, 96%, 18%);
   --purplish-blue: hsl(243, 100%, 62%);
@@ -23,7 +39,8 @@
 
 html,
 body,
-#root {
+#root,
+.app {
   height: 100%;
 }
 
