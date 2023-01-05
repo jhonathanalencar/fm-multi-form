@@ -1,23 +1,26 @@
+import { ReactNode } from "react";
+import { useContextSelector } from "use-context-selector";
+
+import { FormContext } from "../../contexts/FormContext";
+import { AddonsForm } from "./components/AddonsForm";
+import { PersonalInfoForm } from "./components/PersonalInfoForm";
+import { SelectPlanForm } from "./components/SelectPlanForm";
+import { SummaryForm } from "./components/SummaryForm";
 import "./styles.scss";
 
+const content: { [key: number]: ReactNode } = {
+  1: <PersonalInfoForm />,
+  2: <SelectPlanForm />,
+  3: <AddonsForm />,
+  4: <SummaryForm />,
+};
+
 export function Form() {
+  const step = useContextSelector(FormContext, (state) => state.step);
   return (
     <div className="form">
       <div className="form__container">
-        <form action="" className="form__content">
-          <h1>Personal info</h1>
-          <p>Please provide your name, email address, and phone number.</p>
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" placeholder="e.g. Stephen Hawking" />
-          <label htmlFor="email">Email Address</label>
-          <input type="email" placeholder="e.g. stephenhawking@lorem.com" />
-          <label htmlFor="phoneNumber">Phone Number</label>
-          <input
-            id="phoneNumber"
-            type="tel"
-            placeholder="e.g. +1 234 567 890"
-          />
-        </form>
+        <div className="form__content">{content[step]}</div>
       </div>
     </div>
   );
