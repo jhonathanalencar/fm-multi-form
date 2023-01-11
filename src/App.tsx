@@ -1,3 +1,3 @@
 export function App() {
-  return <div>Mikasa</div>;
+  return <div className="app">Mikasa</div>;
 }
