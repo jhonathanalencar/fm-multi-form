@@ -1,0 +1,45 @@
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+    color: var(--neutral-200);
+    font-weight: 700;
+    border: 0.15rem solid var(--neutral-300);
+    font-size: 1.125rem;
+
+    &.active {
+      background-color: var(--primary-100);
+      border-color: var(--primary-100);
+      color: var(--primary-400);
+    }
+  }
+
+  .step__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--neutral-300);
+    }
+
+    strong {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--neutral-100);
+    }
+  }
+}
